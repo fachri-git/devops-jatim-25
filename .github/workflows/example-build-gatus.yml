@@ -5,13 +5,13 @@ on:
   workflow_dispatch:
 
 env:
-  AWS_REGION:
-  ECR_REPOSITORY:
-  ECS_CLUSTER:
+  AWS_REGION: "us-east-1"
+  ECR_REPOSITORY: "339713193587.dkr.ecr.us-east-1.amazonaws.com/lks-gatus"
+  ECS_CLUSTER: "arn:aws:ecs:us-east-1:339713193587:cluster/lks-oss-cluster"
   TOKEN: ${{ secrets.TOKEN }}
 
-  ECS_GATUS_SERVICE:
-  GATUS_TASK_DEFINITION:
+  ECS_GATUS_SERVICE: "arn:aws:ecs:us-east-1:339713193587:service/lks-oss-cluster/gatus-service"
+  GATUS_TASK_DEFINITION: "arn:aws:ecs:us-east-1:339713193587:task-definition/lks-gatus-app:2"
   GATUS_URL: "??? ${{ secrets.ALB_ENDPOINT }} ???"
 # FILL THE MISSING VALUES ABOVE
 
